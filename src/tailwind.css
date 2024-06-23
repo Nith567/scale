@@ -26,6 +26,7 @@
 body {
   background-color: black;
   color: white;
+  width: 100vw;
   font-family: "Inter", sans-serif;
   overflow-x: hidden;
   box-sizing: border-box;
@@ -35,6 +36,7 @@ body {
 }
 html {
   box-sizing: border-box;
+  width: 100vw;
   padding: 0;
   margin: 0;
   border: 0;
@@ -83,4 +85,80 @@ html {
 
 .bg-custom-1:hover {
   background: #c88bc4;
+}
+
+.hero_cubespinner__5nU4O {
+  animation-name: hero_spincube__bGRiG;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+  animation-duration: 14s;
+  transform-style: preserve-3d;
+  transform-origin: -50% 30px;
+  position: absolute;
+  inset: 0;
+}
+
+@keyframes hero_spincube__bGRiG {
+  0%,
+  100% {
+    transform: rotateX(0deg);
+  }
+
+  0%,
+  25% {
+    transform: rotateX(0deg);
+  }
+  33%,
+  58% {
+    transform: rotateX(120deg);
+  }
+  66%,
+  92% {
+    transform: rotateX(240deg);
+  }
+  100% {
+    transform: rotateX(1turn);
+  }
+}
+
+.hero_cubespinner__5nU4O div {
+  position: absolute;
+  inset: 0;
+  height: 60px;
+  text-align: center;
+  background: linear-gradient(
+    50deg,
+    #714dff,
+    #9c83ff 31.28%,
+    #e151ff 77.97%,
+    #fff759 95.64%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero_cubespinner__5nU4O .hero_face1____5ZN {
+  transform: translateZ(30px);
+  -webkit-backface-visibility: hidden;
+}
+
+.hero_cubespinner__5nU4O .hero_face2__hWvJM {
+  transform: rotateX(120deg) translateZ(30px);
+  -webkit-backface-visibility: hidden;
+}
+
+.hero_cubespinner__5nU4O .hero_face3__qUXn4 {
+  transform: rotateX(240deg) translateZ(30px);
+  -webkit-backface-visibility: hidden;
+}
+
+.scroll__h {
+  display: flex;
+  overflow-x: scroll; /* Enable horizontal scrolling */
+  -ms-overflow-style: none; /* Hide scrollbar in Internet Explorer and Edge */
+  scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.scroll__h::-webkit-scrollbar {
+  display: none; /* Hide scrollbar in WebKit-based browsers */
 }

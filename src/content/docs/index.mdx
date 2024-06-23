@@ -2,24 +2,35 @@
 title: Welcome to Starlight
 description: Get started building your docs site with Starlight.
 template: splash
+hero:
+  tagline: Congrats on setting up a new Starlight project!
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: Example Guide
+      link: /guides/example/
+      icon: right-arrow
+      variant: primary
+    - text: Read the Starlight docs
+      link: https://starlight.astro.build
+      icon: external
 ---
 
-import Hero from "../../components/Hero.tsx";
-import Navbar from "../../components/Navbar.tsx";
-import Models from "../../components/Models.tsx";
-import AIProviders from "../../components/AIProviders.tsx";
-import BuildAI from "../../components/BuildAI.tsx";
-import ApplyAI from "../../components/ApplyAI.tsx";
-import Footer from "../../components/Footer.tsx";
-import CaseStudy from "../../components/CaseStudy.tsx";
-import Customers from "../../components/Customers.tsx";
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
-<Navbar client:only="react" />
-<Hero client:only="react" />
-<Models client:only="react" />
-<AIProviders client:only="react" />
-<BuildAI client:only="react" />
-<ApplyAI client:only="react" />
-<CaseStudy client:only="react" />
-<Customers client:only="react" />
-<Footer client:only="react" />
+## Next steps
+
+<CardGrid stagger>
+  <Card title="Update content" icon="pencil">
+    Edit `src/content/docs/index.mdx` to see this page change.
+  </Card>
+  <Card title="Add new content" icon="add-document">
+    Add Markdown or MDX files to `src/content/docs` to create new pages.
+  </Card>
+  <Card title="Configure your site" icon="setting">
+    Edit your `sidebar` and other config in `astro.config.mjs`.
+  </Card>
+  <Card title="Read the docs" icon="open-book">
+    Learn more in [the Starlight Docs](https://starlight.astro.build/).
+  </Card>
+</CardGrid>
