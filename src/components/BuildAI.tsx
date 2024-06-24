@@ -7,7 +7,7 @@ function BuildAI() {
   const [selected, setSelected] = React.useState<string>("3D");
   const options = ["3D", "Mapping", "Image", "Text", "Audio"];
   return (
-    <section className="flex flex-col items-center py-[20vh]">
+    <section className="flex flex-col gap-3 items-center py-[20vh]">
       <p className="text-[#D1AAD7] tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-sm">
         BUILD AI
       </p>
@@ -21,7 +21,7 @@ function BuildAI() {
         style={{ margin: "5rem 0" }}
         className="w-full flex flex-row gap-4 items-start justify-between bg-[#100410] p-5 rounded-xl"
       >
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col gap-2 items-start">
           <p className="text-[2.1rem]">Data Labeling</p>
           <p className="text-neutral-400">
             The best quality data to fuel the best performing models
@@ -47,7 +47,7 @@ function BuildAI() {
             AI-based techniques with human-in-the-loop, delivering labeled data
             at unprecedented quality, scalability, and efficiency.
           </p>
-          <button className="font-medium rounded-xl justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+          <button className="font-medium my-4 rounded-xl justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
             Label My Data
             <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
               →
@@ -83,7 +83,7 @@ function BuildAI() {
         style={{ margin: "5rem 0" }}
         className="w-full flex flex-row-reverse gap-8 items-start justify-between bg-[#100410] p-5 rounded-xl"
       >
-        <div className="flex flex-col items-start">
+        <div className="flex flex-col gap-3 items-start">
           <p className="text-[2.1rem]">Data Curation</p>
           <p className="text-neutral-400">
             Unearth the most valuable data by intelligently managing your
@@ -96,7 +96,7 @@ function BuildAI() {
             Maximize the value of your labeling budget by identifying the
             highest value data to label, even without ground truth labels.
           </p>
-          <button className="font-medium rounded-xl justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+          <button className="font-medium my-4 rounded-xl justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
             Curate My Data
             <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
               →

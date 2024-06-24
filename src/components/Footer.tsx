@@ -2,63 +2,63 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col">
+    <footer className="flex flex-col gap-4">
       <div
         style={{
           display: "flex",
           flexDirection: "row",
         }}
-        className="justify-between text-neutral-400 text-sm leading-none"
+        className="justify-between text-[1.01rem] py-10 text-neutral-400 leading-none"
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
           <p className="font-semibold">PRODUCTS</p>
-          <p>Scale Data Engine</p>
-          <p>Scale GenAI Platform</p>
-          <p>Scale Donovan</p>
+          <p className="text-sm">Scale Data Engine</p>
+          <p className="text-sm"> Scale GenAI Platform</p>
+          <p className="text-sm">Scale Donovan</p>
 
           <p className="font-semibold pt-5">GOVERNMENT</p>
-          <p>Defense</p>
-          <p>Federal</p>
-          <p>Public Sector</p>
+          <p className="text-sm">Defense</p>
+          <p className="text-sm">Federal</p>
+          <p className="text-sm">Public Sector</p>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
           <p className="font-semibold">COMPANY</p>
-          <p>About</p>
-          <p>Careers</p>
-          <p>Security</p>
-          <p>Terms</p>
-          <p>Privacy</p>
+          <p className="text-sm">About</p>
+          <p className="text-sm">Careers</p>
+          <p className="text-sm">Security</p>
+          <p className="text-sm">Terms</p>
+          <p className="text-sm">Privacy</p>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
           <p className="font-semibold">RESOURCES</p>
-          <p>Blog</p>
-          <p>Customers</p>
-          <p>Events</p>
-          <p>Open Datasets</p>
-          <p>Documentation</p>
-          <p>Guides</p>
-          <p>Community</p>
-          <p>AI Readiness Report 2024</p>
+          <p className="text-sm">Blog</p>
+          <p className="text-sm">Customers</p>
+          <p className="text-sm">Events</p>
+          <p className="text-sm">Open Datasets</p>
+          <p className="text-sm">Documentation</p>
+          <p className="text-sm">Guides</p>
+          <p className="text-sm">Community</p>
+          <p className="text-sm">AI Readiness Report 2024</p>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
           <p className="font-semibold">GUIDES</p>
-          <p>Data Labeling</p>
-          <p>ML Model Training</p>
-          <p>Diffusion Models</p>
-          <p>Guide to AI for eCommerce</p>
-          <p>Computer Vision Applications</p>
-          <p>Large Language Models</p>
+          <p className="text-sm">Data Labeling</p>
+          <p className="text-sm">ML Model Training</p>
+          <p className="text-sm">Diffusion Models</p>
+          <p className="text-sm">Guide to AI for eCommerce</p>
+          <p className="text-sm">Computer Vision Applications</p>
+          <p className="text-sm">Large Language Models</p>
         </div>
 
-        <div className="flex flex-col">
+        <div className="flex flex-col gap-4">
           <p className="font-semibold">CONTACT</p>
-          <p>sales@scale.com</p>
-          <p>support@scale.com</p>
-          <p>careers@scale.com</p>
-          <p>press@scale.com</p>
+          <p className="text-sm">sales@scale.com</p>
+          <p className="text-sm">support@scale.com</p>
+          <p className="text-sm">careers@scale.com</p>
+          <p className="text-sm">press@scale.com</p>
 
           <div className="flex flex-row items-end gap-4">
             <svg
@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
       </div>
 
-      <div className="flex flex-row items-end pt-4 border-solid border-t border-t-neutral-700 justify-between text-sm text-neutral-500">
+      <div className="flex py-4 flex-row items-end pt-4 border-solid border-t border-t-neutral-700 justify-between text-sm text-neutral-500">
         <p>Copyright © 2024 Scale AI, Inc. All rights reserved.</p>
         <p>Terms of Use & Privacy Policy</p>
       </div>

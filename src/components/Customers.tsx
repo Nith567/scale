@@ -3,7 +3,7 @@ import pallets from "../../public/palletss.webp";
 
 function Customers() {
   return (
-    <section className="flex flex-col items-center py-[40vh] bg-[#0b030a]">
+    <section className="flex flex-col gap-4 items-center py-[40vh] bg-[#0b030a]">
       <p className="text-[#D1AAD7] tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-sm">
         CUSTOMERS{" "}
       </p>

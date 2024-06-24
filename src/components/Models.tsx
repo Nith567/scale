@@ -41,16 +41,20 @@ function Models() {
             style={{ opacity: page === index ? 1 : page === 10 ? 1 : 0.5 }}
             onMouseEnter={() => handleMouseEnter(index)}
             onMouseLeave={() => setPage(10)}
-            className="flex flex-col leading-none transition-all cursor-pointer transform duration-300 ease-in-out"
+            className="flex flex-col gap-4 mb-8 border-b border-solid border-neutral-800 leading-[1.3] transition-all cursor-pointer transform duration-300 ease-in-out"
           >
-            <p className="text-[1.5rem] leading-[1]">{item.heading}</p>
-            <p className="text-[1.1rem] text-neutral-400 pb-10">
+            <p className="text-[1.4rem] leading-[1]">{item.heading}</p>
+            <p className="text-[1.05rem] text-neutral-400 pb-10">
               {item.content}
             </p>
           </div>
         ))}
       </div>
-      <img src={images[page].src} height={400} width={400} alt="overall" />
+      <img
+        src={images[page].src}
+        className="h-[400px] w-[400px] lg:h-[550px] lg:w-[550px]"
+        alt="overall"
+      />
     </section>
   );
 }

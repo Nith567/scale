@@ -138,7 +138,7 @@ function Hero() {
           </div>
         </div>
       )}
-      <section className="relative flex flex-col gap-4 items-center min-h-screen w-full">
+      <section className="relative flex flex-col gap-4 items-center min-h-screen w-full py-20">
         <h1 className="relative z-[200] text-5xl font-light sm:leading-none leading-[1.1] sm:text-6xl tracking-[-0.89px] font-aeonik text-center">
           Power <br className="lg:hidden" />
           <span className="relative">
@@ -226,32 +226,39 @@ function Hero() {
             />
           </div>
 
-          <div className="absolute top-0 py-12 animate-marquee2 flex flex-row gap-10">
+          <div className="absolute top-0 py-12 animate-marquee2 flex flex-row">
             <img
               style={{ height: "20px", width: "auto" }}
+              className="mx-5"
               src="/public/companies/cohere.png"
             />
             <img
+              className="mx-5"
               style={{ height: "20px", width: "auto" }}
               src="/public/companies/adept.png"
             />
             <img
+              className="mx-5"
               style={{ height: "20px", width: "auto" }}
               src="/public/companies/anthropic.png"
             />
             <img
+              className="mx-5"
               style={{ height: "20px", width: "auto" }}
               src="/public/companies/nvidia.png"
             />
             <img
+              className="mx-5"
               style={{ height: "20px", width: "auto" }}
               src="/public/companies/characterai.png"
             />
             <img
+              className="mx-5"
               style={{ height: "20px", width: "auto" }}
               src="/public/companies/meta.png"
             />
             <img
+              className="mx-5"
               style={{ height: "20px", width: "auto" }}
               src="/public/companies/openai.png"
             />
@@ -269,7 +276,7 @@ function Hero() {
               onClick={() => setVideo(talk.name)}
               className="keen-slider__slide max-w-[400px] min-w-[400px] group rounded-2xl relative text-left !opacity-100 !visible focus-visible:outline outline-[rgba(255,255,255,0.64)] outline-offset-[3px] bg-white/[0.01]"
             >
-              <div className="flex items-center justify-start transition-colors bg-[#D1AAD7]/[0.01]">
+              <div className="flex items-center flex-row gap-3 justify-start transition-colors bg-[#D1AAD7]/[0.01]">
                 <img
                   alt="profile picture"
                   loading="lazy"
@@ -314,17 +321,17 @@ function Hero() {
         </div>
       </section>
 
-      <section className="flex flex-col items-center text-center my-20">
+      <section className="flex flex-col gap-2 items-center text-center my-20">
         <p className="text-[#D1AAD7] tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-sm">
           AI FOR THE ENTERPRISE
         </p>
 
-        <h1>Generative AI Architecture</h1>
-        <p className="w-[90vw] md:max-w-[50vw]">
+        <h1 className="text-[3rem]">Generative AI Architecture</h1>
+        <p className="w-[90vw] text-[1.2rem] md:max-w-[50vw]">
           Whether you&apos;re building your own models or applying foundation
           models to your business, data remains the biggest bottleneck to AI.
         </p>
-        <div className="font-medium rounded-xl justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+        <div className="font-medium rounded-xl my-3 outline-neutral-700 outline outline-[1px] justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
           Talk to a Generative AI Expert
           <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
             →
