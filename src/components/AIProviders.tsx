@@ -8,7 +8,7 @@ import anthropic from "../../public/companies/anthropic.png";
 function AIProviders() {
   const companies = [openAI, adept, meta, cohere, anthropic];
   return (
-    <div className="w-full flex flex-col items-center gap-5 tracking-[4px]">
+    <div className="w-full flex text-center lg:text-sm text-xs flex-col items-center gap-5 tracking-[4px] py-20">
       <p>GENERATIVE AI PROVIDERS WE PARTNER WITH:</p>
       <div className="flex flex-row items-end justify-between gap-7">
         <div className="relative flex overflow-x-hidden flex-row gap-10">
@@ -16,7 +16,7 @@ function AIProviders() {
             {companies.map((company, index) => (
               <div
                 key={index + 1000}
-                className="rounded-xl p-4 h-28 w-[230px] flex items-center justify-center border border-white"
+                className="rounded-xl p-10 h-20 w-[180px] lg:h-28 lg:w-[230px] flex items-center justify-center border border-white/20"
               >
                 <img src={company.src} alt="company" />
               </div>
@@ -27,7 +27,7 @@ function AIProviders() {
             {companies.map((company, index) => (
               <div
                 key={index + 1000}
-                className="rounded-xl p-4 h-28 w-[230px] mx-5 flex items-center justify-center border border-white"
+                className="rounded-xl p-10 h-20 w-[180px] lg:h-28 lg:w-[230px] mx-5 flex items-center justify-center border border-white/20"
               >
                 <img src={company.src} alt="company" />
               </div>

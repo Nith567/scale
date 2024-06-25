@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "./ui/Nav";
+import MobileNav from "./ui/MobileNav";
 
 function Navbar() {
   return (
@@ -7,7 +8,8 @@ function Navbar() {
       <nav className="flex flex-row items-center justify-between border-solid border-b border-b-neutral-800 pb-5">
         <div>Scale</div>
         <Nav />
-        <div className="flex flex-row items-center h-full gap-3">
+        <MobileNav />
+        <div className="flex-row hidden lg:flex items-center h-full gap-3">
           <a
             className="relative focus-visible:outline outline-[rgba(255,255,255,0.64)] rounded-xl outline-offset-[3px] inline-block"
             href="/demo"

@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from "react";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import classNames from "classnames";
@@ -5,7 +7,7 @@ import { CaretDownIcon } from "@radix-ui/react-icons";
 
 const Nav = () => {
   return (
-    <NavigationMenu.Root className="relative z-[10000] flex w-full justify-center flex-row ">
+    <NavigationMenu.Root className="relative lg:flex hidden z-[10000] w-full justify-center flex-row ">
       <NavigationMenu.List className="center m-0 flex list-none flex-row rounded-[6px] bg-black">
         <NavigationMenu.Item>
           <NavigationMenu.Trigger className="text-white focus:shadow-violet7 group flex select-none items-center justify-between gap-[2px] rounded-[4px] px-3 py-2 text-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]">
@@ -15,52 +17,143 @@ const Nav = () => {
               aria-hidden
             />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto">
-            <ul className="m-0 grid list-none p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-4">
-              <ListItem
-                className="text-white"
-                title="Scale Data Engine"
-                href="/primitives/docs/overview/introduction"
-              >
-                <p className="leading-none">Data for training models</p>
-              </ListItem>
-              <ListItem
-                className="text-white"
-                title="For Generative AI"
-                href="/primitives/docs/overview/getting-started"
-              >
-                <p className="leading-none">Supervised fine-tuning and RLHF</p>
-              </ListItem>
-              <ListItem
-                className="text-white"
-                title="For Government"
-                href="/primitives/docs/guides/styling"
-              >
-                <p className="leading-none">
-                  High quality data for public sector
-                </p>{" "}
-              </ListItem>
-              <ListItem
-                className="text-white"
-                title="For Automotive"
-                href="/primitives/docs/guides/animation"
-              >
-                <p className="leading-none">Unlock L2 to L5 autonomy</p>{" "}
-              </ListItem>
-              <ListItem
-                className="text-white"
-                title="Scale Donovon"
-                href="/primitives/docs/overview/accessibility"
-              >
-                <p className="leading-none">Platform for Government AI</p>{" "}
-              </ListItem>
-              <ListItem
-                className="text-white"
-                title="Scale GenAI Platform"
-                href="/primitives/docs/overview/releases"
-              >
-                <p className="leading-none">Full stack generatibe</p>{" "}
-              </ListItem>
+          <NavigationMenu.Content className="w-full data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 sm:w-auto">
+            <ul className="m-0 grid list-none p-[22px] sm:w-[800px] sm:grid-flow-col grid-rows-4">
+              <div className="flex flex-row items-center">
+                <img src="/public/nav/engine.png" className="h-12 w-12"></img>
+                <ListItem
+                  className="text-white"
+                  title="Scale Data Engine"
+                  href="/primitives/docs/overview/introduction"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Data for training models
+                  </p>
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/genai.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="For Generative AI"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Supervised fine-tuning and RLHF
+                  </p>
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/gov.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="For Government"
+                  href="/primitives/docs/guides/styling"
+                >
+                  <p className="leading-none text-neutral-500">
+                    High quality data for public sector
+                  </p>{" "}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/automotive.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="For Automotive"
+                  href="/primitives/docs/guides/animation"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Unlock L2 to L5 autonomy
+                  </p>{" "}
+                </ListItem>
+              </div>
+
+              <div className="flex flex-row items-center">
+                <img src="/public/nav/donovan.png" className="h-12 w-12"></img>
+                <ListItem
+                  className="text-white"
+                  title="Scale Donovon"
+                  href="/primitives/docs/overview/accessibility"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Platform for Government AI
+                  </p>{" "}
+                </ListItem>
+              </div>
+
+              <div className="flex flex-row items-center">
+                <img src="/public/nav/platform.png" className="h-12 w-12"></img>
+                <ListItem
+                  className="text-white"
+                  title="Scale GenAI Platform"
+                  href="/primitives/docs/overview/releases"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Full stack generatibe
+                  </p>{" "}
+                </ListItem>
+              </div>
+
+              <div></div>
+              <div></div>
+
+              <div className="flex flex-row items-center">
+                <img
+                  src="/public/nav/evaluation.png"
+                  className="h-12 w-12"
+                ></img>
+                <ListItem
+                  className="text-white"
+                  title="Scale Evaluation"
+                  href="/primitives/docs/overview/introduction"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Evaluation of AI models and applications
+                  </p>
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/devs.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="For Model Developers"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Model evaluation and model teaming
+                  </p>
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/public.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="For Public Sector"
+                  href="/primitives/docs/guides/styling"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Evaluation for AI systems
+                  </p>{" "}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/enterprise.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="For Automotive"
+                  href="/primitives/docs/guides/animation"
+                >
+                  <p className="leading-none text-neutral-500">
+                    Evaluation for monitoring for Enterprise AI apps
+                  </p>{" "}
+                </ListItem>
+              </div>
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
@@ -73,11 +166,42 @@ const Nav = () => {
               aria-hidden
             />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-            <ul className="m-0 grid gap-4 cursor-pointer list-none gap-x-[10px] p-[22px] whitespace-nowrap leading-none sm:max-w-[600px] sm:grid-flow-col sm:grid-rows-3">
-              <a>Defence</a>
-              <a>Federal</a>
-              <a>Public</a>
+          <NavigationMenu.Content className="absolute top-0 right-0 w-full sm:w-auto">
+            <ul className="m-0 text-white grid list-none leading-none relative p-[22px] w-[250px] grid-rows-3 justify-start">
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/gov.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="Defence"
+                  href="/primitives/docs/overview/introduction"
+                >
+                  {""}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/federal.png" className="h-8 w-8"></img>
+                <ListItem
+                  className="text-white"
+                  title="Federal"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
+              <div className="ml-6 flex flex-row items-center">
+                <img
+                  src="/public/nav/public-sector.png"
+                  className="h-8 w-8"
+                ></img>
+                <ListItem
+                  className="text-white"
+                  title="Public"
+                  href="/primitives/docs/guides/styling"
+                >
+                  {""}
+                </ListItem>
+              </div>
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
@@ -91,46 +215,82 @@ const Nav = () => {
             />
           </NavigationMenu.Trigger>
           <NavigationMenu.Content className="data-[motion=from-start]:animate-enterFromLeft data-[motion=from-end]:animate-enterFromRight data-[motion=to-start]:animate-exitToLeft data-[motion=to-end]:animate-exitToRight absolute top-0 left-0 w-full sm:w-auto">
-            <ul className="m-0 text-white grid list-none leading-none p-[22px] sm:w-[600px] sm:grid-flow-col sm:grid-rows-5">
+            <ul className="m-0 grid list-none p-[22px] sm:w-[800px] sm:grid-flow-col grid-rows-5">
               <ListItem
-                className="text-white"
-                title="Open AI"
-                className="text-white"
+                className="text-neutral-500"
+                title="Generative AI"
                 href="/primitives/docs/overview/introduction"
               >
                 {""}
               </ListItem>
               <ListItem
                 className="text-white"
-                title="Cohere"
+                title=""
+                href="/primitives/docs/overview/introduction"
+              >
+                Open AI
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
                 href="/primitives/docs/overview/getting-started"
               >
-                {""}
+                Cohere
               </ListItem>
               <ListItem
                 className="text-white"
-                title="Adept"
+                title=""
                 href="/primitives/docs/guides/styling"
               >
-                {""}
+                Adept
               </ListItem>
               <ListItem
                 className="text-white"
-                title="Nvidia"
+                title=""
                 href="/primitives/docs/guides/animation"
               >
-                {""}
+                Nvidia
               </ListItem>
+
               <ListItem
-                className="text-white"
-                title="US Army"
+                className="text-neutral-500"
+                title="US Government"
                 href="/primitives/docs/overview/accessibility"
               >
                 {""}
               </ListItem>
               <ListItem
                 className="text-white"
-                title="US Air Force"
+                title=""
+                href="/primitives/docs/overview/accessibility"
+              >
+                US Army
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                US Air Force
+              </ListItem>
+
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                Defence Innovation Unit
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                CDAO
+              </ListItem>
+              <ListItem
+                className="text-neutral-500"
+                title="Enterprises"
                 href="/primitives/docs/overview/releases"
               >
                 {""}
@@ -138,19 +298,76 @@ const Nav = () => {
 
               <ListItem
                 className="text-white"
-                title="Defence Innovation Unit"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                Microsoft
+              </ListItem>
+
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                Meta
+              </ListItem>
+
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                GM
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                Nvidia
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
                 href="/primitives/docs/overview/releases"
               >
                 {""}
               </ListItem>
               <ListItem
                 className="text-white"
-                title="CDAO"
+                title=""
                 href="/primitives/docs/overview/releases"
               >
-                {""}
+                GAFG
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                Chegg
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                Howard Hughes
+              </ListItem>
+              <ListItem
+                className="text-white"
+                title=""
+                href="/primitives/docs/overview/releases"
+              >
+                BCG
               </ListItem>
             </ul>
+            <div className="font-medium p-5 whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] new-button_button--purple__hhI2y text-sm px-[30px] py-[14px]">
+              See all customers{" "}
+              <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
+                →
+              </span>
+            </div>
           </NavigationMenu.Content>
         </NavigationMenu.Item>
 
@@ -162,15 +379,90 @@ const Nav = () => {
               aria-hidden
             />
           </NavigationMenu.Trigger>
-          <NavigationMenu.Content className="absolute top-0 left-0 w-full sm:w-auto">
-            <ul className="m-0 flex flex-col gap-4 cursor-pointer list-none gap-x-[10px] p-[22px] whitespace-nowrap leading-none sm:max-w-[600px] ">
-              <a>About </a>
-              <a>Blog</a>
-              <a>Guides</a>
-              <a>Events</a>
-              <a>Careers</a>
-              <a>Documentation</a>
-              <a>AI readiness Report 2024</a>
+          <NavigationMenu.Content className="absolute top-0 right-0 w-full sm:w-auto">
+            <ul className="m-0 text-white grid list-none leading-none p-[22px] w-[500px] grid-rows-7 justify-end">
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/about.svg" className="h-6 w-6"></img>
+                <ListItem
+                  className="text-white"
+                  title="About"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/blog.svg" className="h-6 w-6"></img>
+                <ListItem
+                  className="text-white"
+                  title="Blog"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/guides.svg" className="h-6 w-6"></img>
+                <ListItem
+                  className="text-white"
+                  title="Guides"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/events.svg" className="h-6 w-6"></img>
+                <ListItem
+                  className="text-white"
+                  title="Events"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img src="/public/nav/careers.svg" className="h-6 w-6"></img>
+                <ListItem
+                  className="text-white"
+                  title="Careers"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img
+                  src="/public/nav/documentation.svg"
+                  className="h-6 w-6"
+                ></img>
+                <ListItem
+                  className="text-white"
+                  title="Documentation"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
+
+              <div className="ml-6 flex flex-row items-center">
+                <img
+                  src="/public/nav/ai-readiness-report.svg"
+                  className="h-6 w-6"
+                ></img>
+                <ListItem
+                  className="text-white"
+                  title="AI readiness Report 2024"
+                  href="/primitives/docs/overview/getting-started"
+                >
+                  {""}
+                </ListItem>
+              </div>
             </ul>
           </NavigationMenu.Content>
         </NavigationMenu.Item>

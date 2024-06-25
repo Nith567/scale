@@ -107,12 +107,14 @@ function CaseStudy() {
     },
   ];
   return (
-    <section className="flex flex-col gap-3 items-center my-[10vh] bg-[#0b030a]">
-      <p className="text-[#D1AAD7] tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-sm">
-        LEARN HOW WE SERVE ENTERPRISES LARGE AND SMALL{" "}
+    <section className="flex flex-col gap-3 text-center items-center my-[10vh] bg-[#0b030a]">
+      <p className="mb-5 lg:mb-5 overflow-hidden tracking-[3px] text-center text-xs md:px-5 md:py-2 lg:text-xs uppercase bg-white bg-opacity-5 text-[#D1AAD7] rounded-lg md:rounded-full p-3">
+        <span>LEARN HOW WE SERVE ENTERPRISES LARGE AND SMALL</span>
       </p>
-      <p className="text-[3rem] leading-[1]">Case Studies & Resources</p>
-      <p className="text-[1.2rem] text-neutral-300 text-center w-[600px]">
+      <p className="font-aeonik leading-snug lg:leading-[1.25] text-3xl md:text-4.5xl lg:text-5xl [text-wrap:balance]">
+        Case Studies & Resources
+      </p>
+      <p className="mt-4 lg:mt-2 leading-[1.60] text-neutral-100 lg:text-gray-300 lg:text-xl [text-wrap:balance]">
         We've worked with the world's leading AI teams for years, and delivered
         more high-quality data than anybody else.
       </p>
@@ -124,7 +126,7 @@ function CaseStudy() {
         {data.map((ele, i) => (
           <a
             key={i}
-            className="keen-slider__slide  flex flex-col text-white  gap-2 max-w-[400px] min-w-[400px] group rounded-2xl relative text-left !opacity-100 !visible focus-visible:outline outline-[rgba(255,255,255,0.64)] outline-offset-[3px] bg-white/[0.01]"
+            className="keen-slider__slide  flex flex-col text-white  gap-2 max-w-[300px] min-w-[300px] lg:max-w-[400px] lg:min-w-[400px] group rounded-2xl relative text-left !opacity-100 !visible focus-visible:outline outline-[rgba(255,255,255,0.64)] outline-offset-[3px] bg-white/[0.01]"
           >
             <img src={ele.src} />
             <p className="text-sm leading-none text-pink-300">{ele.title}</p>

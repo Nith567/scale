@@ -7,96 +7,149 @@ function BuildAI() {
   const [selected, setSelected] = React.useState<string>("3D");
   const options = ["3D", "Mapping", "Image", "Text", "Audio"];
   return (
-    <section className="flex flex-col gap-3 items-center py-[20vh]">
-      <p className="text-[#D1AAD7] tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-sm">
+    <section className="flex flex-col gap-3 items-center py-16">
+      <p className="text-[#D1AAD7] tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-xs lg:text-sm">
         BUILD AI
       </p>
-      <p className="text-[3rem] leading-[1]">Scale Data Engine</p>
-      <p className="text-[1.2rem] text-neutral-300">
+      <p className="font-aeonik leading-snug lg:leading-[1.25] text-3xl md:text-4.5xl lg:text-5xl [text-wrap:balance]">
+        Scale Data Engine
+      </p>
+      <p className="text-center px-10 mt-4 lg:mt-2 leading-[1.60] text-neutral-100 lg:text-gray-300 lg:text-xl [text-wrap:balance]">
         For AI teams, Scale Data Engine improves your models by improving your
         data.
       </p>
 
-      <div
-        style={{ margin: "5rem 0" }}
-        className="w-full flex flex-row gap-4 items-start justify-between bg-[#100410] p-5 rounded-xl"
-      >
-        <div className="flex flex-col gap-2 items-start">
-          <p className="text-[2.1rem]">Data Labeling</p>
-          <p className="text-neutral-400">
-            The best quality data to fuel the best performing models
+      <div className="w-full mt-16 flex flex-col lg:flex-row-reverse gap-8 items-start justify-between bg-[#100410] p-5 rounded-xl">
+        <div className="flex flex-col gap-3 items-start">
+          <p className="font-aeonik text-[2rem] xl:text-4xl mb-2 text-white">
+            RLHF{" "}
           </p>
-          <div className="rounded-full text-neutral-400 text-sm p-1 flex flex-row justify-between items-end gap-1">
-            {options.map((option) => (
-              <button
-                onClick={() => setSelected(option)}
-                style={
-                  option === selected
-                    ? { color: "white", background: "#fff4" }
-                    : {}
-                }
-                key={option}
-                className="rounded-full px-4 py-2 flex items-center justify-center"
-              >
-                {option}
-              </button>
-            ))}
-          </div>
-          <p className="w-[400px]">
-            Scale has pioneered in the data labeling industry by combining
-            AI-based techniques with human-in-the-loop, delivering labeled data
-            at unprecedented quality, scalability, and efficiency.
+          <p className="text-neutral-400 w-[80vw] lg:w-auto">
+            Powering the next generation of Generative AI
           </p>
-          <button className="font-medium my-4 rounded-xl justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+
+          <p className="w-[320px] lg:w-[400px]">
+            Scale Generative AI Data Engine powers the most advanced LLMs and
+            generative models in the world through world-class RLHF, data
+            generation, model evaluation, safety, and alignment.
+          </p>
+          <button className="hidden lg:flex font-medium my-4 rounded-xl justify-center flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
             Label My Data
             <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
               →
             </span>
           </button>
         </div>
-        {selected === "3D" ? (
-          <ThreeD />
-        ) : selected === "Mapping" ? (
-          <img
-            src={mapping.src}
-            className="w-[500px] h-auto object-cover object-center"
-            alt="mapping"
-          />
-        ) : selected === "Image" ? (
-          <img
-            src={labeling.src}
-            className="w-[500px] h-auto object-cover object-center"
-            alt="image labeling"
-          />
-        ) : selected === "Audio" ? (
-          <div className="w-[500px]">
-            <Text />
-          </div>
-        ) : (
-          <div className="w-[500px]">
-            <Text />
-          </div>
-        )}
+
+        <div className="flex flex-col items-start gap-6">
+          <video
+            autoPlay={true}
+            loop={true}
+            muted={true}
+            controls={false}
+            className="w-[350px] lg:w-[600px] rounded-lg"
+          >
+            <source src="/rfhl.mkv"></source>
+          </video>
+          <button className="lg:hidden flex font-medium my-4 rounded-xl justify-center flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+            Curate My Data
+            <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
+              →
+            </span>
+          </button>
+        </div>
       </div>
 
-      <div
-        style={{ margin: "5rem 0" }}
-        className="w-full flex flex-row-reverse gap-8 items-start justify-between bg-[#100410] p-5 rounded-xl"
-      >
+      <div className="w-full flex flex-col lg:flex-row gap-4 items-start justify-between bg-[#100410] p-5 rounded-xl">
+        <div className="flex flex-col gap-4 items-start">
+          <p className="font-aeonik text-[2rem] xl:text-4xl mb-2 text-white">
+            Data Labeling
+          </p>
+          <p className="text-neutral-400 w-[80vw] lg:w-auto">
+            The best quality data to fuel the best performing models
+          </p>
+          <div className="scroll__h lg:w-auto w-[85vw]">
+            <div className="rounded-full border border-solid border-white/20 text-neutral-400 text-sm p-1.5 flex flex-row justify-between items-end gap-1">
+              {options.map((option) => (
+                <button
+                  onClick={() => setSelected(option)}
+                  style={
+                    option === selected
+                      ? { color: "white", background: "#fff4" }
+                      : {}
+                  }
+                  key={option}
+                  className="rounded-full px-4 py-2 flex items-center justify-center"
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+          </div>
+          <p className="w-[320px] lg:w-[400px]">
+            Scale has pioneered in the data labeling industry by combining
+            AI-based techniques with human-in-the-loop, delivering labeled data
+            at unprecedented quality, scalability, and efficiency.
+          </p>
+          <button className="hidden lg:flex font-medium my-4 rounded-xl justify-center flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+            Label My Data
+            <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
+              →
+            </span>
+          </button>
+        </div>
+
+        <div className="flex flex-col gap-6 items-start">
+          {selected === "3D" ? (
+            <ThreeD />
+          ) : selected === "Mapping" ? (
+            <img
+              src={mapping.src}
+              className="w-[350px] lg:w-[600px] h-auto object-cover object-center"
+              alt="mapping"
+            />
+          ) : selected === "Image" ? (
+            <img
+              src={labeling.src}
+              className="w-[350px] lg:w-[600px] h-auto object-cover object-center"
+              alt="image labeling"
+            />
+          ) : selected === "Audio" ? (
+            <div className="w-[350px] lg:w-[600px]">
+              <Text />
+            </div>
+          ) : (
+            <div className="w-[350px] lg:w-[600px]">
+              <Text />
+            </div>
+          )}
+
+          <button className="flex lg:hidden font-medium my-4 rounded-xl justify-center flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+            Label My Data
+            <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
+              →
+            </span>
+          </button>
+        </div>
+      </div>
+
+      <div className="w-full flex flex-col lg:flex-row-reverse gap-8 items-start justify-between bg-[#100410] p-5 rounded-xl">
         <div className="flex flex-col gap-3 items-start">
-          <p className="text-[2.1rem]">Data Curation</p>
-          <p className="text-neutral-400">
+          <p className="font-aeonik text-[2rem] xl:text-4xl mb-2 text-white">
+            Data Curation
+          </p>
+          <p className="text-neutral-400 w-[80vw] lg:w-auto">
             Unearth the most valuable data by intelligently managing your
-            dataset{" "}
+            dataset.
           </p>
 
-          <p className="w-[400px]">
+          <p className="w-[320px] lg:w-[400px]">
             Scale&apos;s suite of dataset management, testing, model evaluation,
             and model comparison tools enable you to “label what matters.”
             Maximize the value of your labeling budget by identifying the
             highest value data to label, even without ground truth labels.
           </p>
-          <button className="font-medium my-4 rounded-xl justify-center flex flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+          <button className="hidden lg:flex font-medium my-4 rounded-xl justify-center flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
             Curate My Data
             <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
               →
@@ -104,11 +157,19 @@ function BuildAI() {
           </button>
         </div>
 
-        <img
-          src={datac.src}
-          className="w-[500px] h-auto object-cover object-center"
-          alt="image labeling"
-        />
+        <div className="flex flex-col items-start gap-6">
+          <img
+            src={datac.src}
+            className="w-[600px] h-auto object-cover object-center"
+            alt="image labeling"
+          />
+          <button className="lg:hidden flex font-medium my-4 rounded-xl justify-center flex-nowrap whitespace-nowrap transition-translate duration-300 cursor-pointer group items-center h-full group leading-[150%] bg-custom-1 text-sm px-[30px] py-[10px]">
+            Curate My Data
+            <span className="inline-block ml-1 font-normal duration-300 w-fit transition-translate group-hover:translate-x-1 font-unicode">
+              →
+            </span>
+          </button>
+        </div>
       </div>
     </section>
   );
@@ -116,7 +177,7 @@ function BuildAI() {
 
 function ThreeD() {
   return (
-    <div className="w-[500px] h-[300px] bg-black">
+    <div className="w-[300px] h-[172px] lg:w-[600px] lg:h-[300px] bg-black">
       <iframe
         src="https://lidar-now.scale.com/scene?title=Scene%20%231"
         style={{ height: "100%", width: "100%" }}

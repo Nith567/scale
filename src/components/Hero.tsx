@@ -74,6 +74,14 @@ function Hero() {
     },
     [WheelControls]
   );
+  const companies = [
+    "/companies/meta.png",
+    "/companies/cohere.png",
+    "/companies/adept.png",
+    "/companies/anthropic.png",
+    "/companies/nvidia.png",
+    "/companies/characterai.png",
+  ];
 
   const youtube = {
     eric: "https://www.youtube.com/embed/Gn-9SRkJazs?si=Pldtl1MzEuBuv_3i",
@@ -85,37 +93,37 @@ function Hero() {
   const techTalks = [
     {
       name: "eric",
-      src: "/public/auth.png",
+      src: "/auth.png",
       by: "by Eric Schmidt",
       info: "Navigating an AI-Enabled Future",
     },
     {
       name: "fie",
-      src: "/public/auth2.png",
+      src: "/auth2.png",
       by: "by Fei Fei Li",
       info: "Understanding & Interacting With The Real World",
     },
     {
       name: "nat",
-      src: "/public/auth3.png",
+      src: "/auth3.png",
       by: "by Fei Fei Li",
       info: "Understanding & Interacting With The Real World",
     },
     {
       name: "greg",
-      src: "/public/auth4.png",
+      src: "/auth4.png",
       by: "by Fei Fei Li",
       info: "Understanding & Interacting With The Real World",
     },
     {
       name: "thomas",
-      src: "/public/auth5.png",
+      src: "/auth5.png",
       by: "by Fei Fei Li",
       info: "Understanding & Interacting With The Real World",
     },
   ];
   return (
-    <main className="py-10">
+    <main className="py-5 lg:py-10">
       {video !== "" && (
         <div
           className="flex flex-col items-center justify-center h-screen w-full fixed top-0 left-0 z-[300000] bg-black/70"
@@ -138,7 +146,7 @@ function Hero() {
           </div>
         </div>
       )}
-      <section className="relative flex flex-col gap-4 items-center min-h-screen w-full py-20">
+      <section className="relative flex flex-col gap-4 items-center min-h-screen w-full py-9 lg:py-20">
         <h1 className="relative z-[200] text-5xl font-light sm:leading-none leading-[1.1] sm:text-6xl tracking-[-0.89px] font-aeonik text-center">
           Power <br className="lg:hidden" />
           <span className="relative">
@@ -151,7 +159,7 @@ function Hero() {
           </span>
           <br /> With Your&nbsp;Data
         </h1>
-        <p className="text-[1.1rem] leading-[1.5] relative z-[200] text-center md:w-[55vw] w-[90vw]">
+        <p className="text-[1.05rem] lg:text-[1.1rem] leading-[1.4] lg:leading-[1.5] relative z-[200] text-center md:w-[55vw] w-[90vw]">
           Make the best models with the best data. Scale Data Engine leverages
           your enterprise data, and with Scale GenAI Platform, safely unlocks
           the value of AI.
@@ -160,9 +168,8 @@ function Hero() {
           loading="lazy"
           decoding="async"
           data-nimg="1"
-          className="absolute top-0 left-0 duration-1000 pointer-events-none object-cover z-[100]"
-          style={{ width: "100vw;" }}
-          src="/public/pallets.png"
+          className="absolute  top-0 h-[55vw] lg:h-auto left-0 duration-1000 pointer-events-none object-cover z-[100]"
+          src="/pallets.png"
         />
 
         <div className="justify-center lg:pt-8 flex items-center gap-x-6">
@@ -188,80 +195,33 @@ function Hero() {
             </span>
           </a>
         </div>
-        <p className="text-[1.1rem] text-neutral-400 py-8 pt-28 leading-none relative z-[200] text-center md:w-[60vw] w-[90vw]">
+        <p className="text-xs lg:text-sm text-neutral-400 py-8 pt-14 lg:pt-28 leading-[1.4] lg:leading-none relative z-[200] text-center md:w-[60vw] w-[90vw]">
           Scale works with{" "}
-          <span className="text-white">Generative AI Companies,</span> U.S.
-          Government Agencies & Enterprises
+          <span className="text-white">Generative AI Companies,</span>{" "}
+          <span>U.S. Government Agencies</span> & <span>Enterprises</span>
         </p>
 
-        <div className="relative flex overflow-x-hidden flex-row gap-10">
-          <div className="py-12 animate-marquee flex flex-row gap-10">
-            <img
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/cohere.png"
-            />
-            <img
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/adept.png"
-            />
-            <img
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/anthropic.png"
-            />
-            <img
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/nvidia.png"
-            />
-            <img
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/characterai.png"
-            />
-            <img
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/meta.png"
-            />
-            <img
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/openai.png"
-            />
+        <div className="relative flex overflow-x-hidden">
+          <div className="py-3 lg:py-12 animate-marquee flex flex-row items-center gap-10">
+            {companies.map((ele, ind) => (
+              <span key={ind} className="w-[100px]">
+                <img
+                  src={ele}
+                  className="w-[100px] h-auto block object-cover object-center"
+                />
+              </span>
+            ))}
           </div>
 
-          <div className="absolute top-0 py-12 animate-marquee2 flex flex-row">
-            <img
-              style={{ height: "20px", width: "auto" }}
-              className="mx-5"
-              src="/public/companies/cohere.png"
-            />
-            <img
-              className="mx-5"
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/adept.png"
-            />
-            <img
-              className="mx-5"
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/anthropic.png"
-            />
-            <img
-              className="mx-5"
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/nvidia.png"
-            />
-            <img
-              className="mx-5"
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/characterai.png"
-            />
-            <img
-              className="mx-5"
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/meta.png"
-            />
-            <img
-              className="mx-5"
-              style={{ height: "20px", width: "auto" }}
-              src="/public/companies/openai.png"
-            />
+          <div className="absolute top-0 py-3 lg:py-12  animate-marquee2 flex flex-row items-center gap-10 px-10">
+            {companies.map((ele, ind) => (
+              <span key={ind} className="w-[100px]">
+                <img
+                  src={ele}
+                  className="w-[100px] h-auto block object-cover object-center"
+                />
+              </span>
+            ))}
           </div>
         </div>
 
@@ -272,23 +232,20 @@ function Hero() {
           {techTalks.map((talk, ind) => (
             <button
               key={talk.name}
-              style={{ width: "400px" }}
               onClick={() => setVideo(talk.name)}
-              className="keen-slider__slide max-w-[400px] min-w-[400px] group rounded-2xl relative text-left !opacity-100 !visible focus-visible:outline outline-[rgba(255,255,255,0.64)] outline-offset-[3px] bg-white/[0.01]"
+              className="keen-slider__slide lg:max-w-[400px] lg:min-w-[400px] max-w-[320px] min-w-[320px] group rounded-2xl relative text-left !opacity-100 !visible focus-visible:outline outline-[rgba(255,255,255,0.64)] outline-offset-[3px] bg-white/[0.01]"
             >
-              <div className="flex items-center flex-row gap-3 justify-start transition-colors bg-[#D1AAD7]/[0.01]">
+              <div className="flex items-center h-full flex-row gap-3 justify-start transition-colors bg-white/[0.1] rounded-2xl pt-4">
                 <img
                   alt="profile picture"
                   loading="lazy"
-                  width="100"
-                  height="100"
                   decoding="async"
                   data-nimg="1"
-                  className=""
+                  className="w-[120px] h-auto lg:w-[190px]"
                   src={talk.src}
                 />
-                <div className="flex flex-col pr-2.5 sm:pr-4 lg:pr-10 -ml-3 sm:ml-0">
-                  <p className="mb-1 text-xs font-medium sm:text-sm text-scale-lightmauve">
+                <div className="flex flex-col pr-2.5 pb-2 sm:pr-4 lg:pr-10 -ml-3 sm:ml-0">
+                  <p className="text-pink-300 mb-1 text-xs font-medium sm:text-sm text-scale-lightmauve">
                     Tech Talk
                   </p>
                   <p className="font-aeonik text-lg leading-6 sm:text-xl lg:text-2xl sm:leading-[111%] mb-3 sm:mb-6 lg:mb-2 line-clamp-2">
@@ -301,7 +258,7 @@ function Hero() {
               </div>
               <div
                 role="none"
-                className="absolute items-center duration-150 overflow-hidden justify-center w-6 h-6 group-hover:bg-white bg-white/10 border group-hover:border-white transition-colors ease-linear border-white/[0.13] flex rounded-full pointer-events-none right-3 bottom-3 sm:right-4 sm:bottom-4 sm:w-10 sm:h-10"
+                className="absolute items-center duration-150 overflow-hidden justify-center w-6 h-6 group-hover:bg-white bg-white/10 border group-hover:border-white transition-colors ease-linear border-white/[0.13] flex rounded-full pointer-events-none right-3 bottom-4 sm:right-4 sm:w-10 sm:h-10"
               >
                 <svg
                   viewBox="0 0 16 16"
@@ -321,13 +278,15 @@ function Hero() {
         </div>
       </section>
 
-      <section className="flex flex-col gap-2 items-center text-center my-20">
-        <p className="text-[#D1AAD7] tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-sm">
+      <section className="flex flex-col gap-3 items-center text-center my-20">
+        <p className="text-[#D1AAD7] tracking-[2px] lg:tracking-[4px] bg-white/5 rounded-full px-5 py-2 text-xs lg:text-sm">
           AI FOR THE ENTERPRISE
         </p>
 
-        <h1 className="text-[3rem]">Generative AI Architecture</h1>
-        <p className="w-[90vw] text-[1.2rem] md:max-w-[50vw]">
+        <h1 className="text-[2rem] leading-[1.2] lg:text-[3rem]">
+          Generative AI Architecture
+        </h1>
+        <p className="w-[90vw] text-[0.9rem] max-w-[75vw] lg:text-[1.2rem] md:max-w-[50vw]">
           Whether you&apos;re building your own models or applying foundation
           models to your business, data remains the biggest bottleneck to AI.
         </p>
